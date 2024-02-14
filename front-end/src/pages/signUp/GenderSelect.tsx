@@ -1,6 +1,11 @@
 import React from "react";
 
-const GenderSelect = () => {
+type genderProps = {
+	selectedGender: string;
+	handleChange: (value: string) => void;
+};
+
+const GenderSelect = ({ selectedGender, handleChange }: genderProps) => {
 	return (
 		<div className="flex gap-4">
 			<div className="form-control">
@@ -10,6 +15,8 @@ const GenderSelect = () => {
 						name="gender"
 						id="male"
 						className="check-box border-slate-900"
+						checked={selectedGender === "male"}
+						onChange={(e) => handleChange(e.target.id)}
 					/>
 					<span className="label-text">Male</span>
 				</label>
@@ -21,6 +28,8 @@ const GenderSelect = () => {
 						name="gender"
 						id="female"
 						className="check-box border-slate-900"
+						checked={selectedGender === "female"}
+						onChange={(e) => handleChange(e.target.id)}
 					/>
 					<span className="label-text">Female</span>
 				</label>
