@@ -26,7 +26,7 @@ const useLogin = () => {
 			if (data.error) {
 				throw new Error(data.error);
 			}
-			console.log("qua dòng này");
+
 			localStorage.setItem("chat-user", JSON.stringify(data));
 			setAuthUser(data);
 		} catch (error) {
