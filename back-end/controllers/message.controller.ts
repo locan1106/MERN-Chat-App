@@ -5,7 +5,7 @@ import Message from "../models/message.model";
 export const sendMessage = async (req: any, res: Response) => {
 	try {
 		const { message } = req.body;
-		console.log(message);
+
 		const { id: receiverId } = req.params;
 		const senderId = req.user._id;
 
@@ -51,7 +51,7 @@ export const getMessage = async (req: any, res: Response) => {
 	try {
 		const userToChatId = req.params.id;
 		const senderId = req.user._id;
-		console.log(userToChatId);
+
 		const conversation = await Conversation.findOne({
 			participants: { $all: [senderId, userToChatId] },
 		}).populate("messages");
