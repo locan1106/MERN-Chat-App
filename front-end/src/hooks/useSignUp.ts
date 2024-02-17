@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { User } from "../interfaces/user";
+import { IUser } from "../interfaces/user";
 import toast from "react-hot-toast";
 import { useAuthContext } from "../context/AuthContext";
 
@@ -14,7 +14,7 @@ const useSignUp = () => {
 		password,
 		confirmPassword,
 		gender,
-	}: User) => {
+	}: IUser) => {
 		const success = handleInputErrors({
 			fullName,
 			username,
@@ -67,7 +67,7 @@ function handleInputErrors({
 	password,
 	confirmPassword,
 	gender,
-}: User) {
+}: IUser) {
 	if (!fullName || !username || !password || !confirmPassword || !gender) {
 		toast.error("Please fill in all fields");
 		return false;

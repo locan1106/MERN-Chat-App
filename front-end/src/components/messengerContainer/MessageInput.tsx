@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BiSend } from "react-icons/bi";
 import useSendMessage from "../../hooks/useSendMessage";
 

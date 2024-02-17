@@ -1,4 +1,3 @@
-import React from "react";
 import SearchInput from "./SearchInput";
 import ConversationsList from "./ConversationsList";
 import LogoutButton from "./LogoutButton";

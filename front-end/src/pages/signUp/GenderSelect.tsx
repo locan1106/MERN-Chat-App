@@ -1,5 +1,3 @@
-import React from "react";
-
 type genderProps = {
 	selectedGender: string;
 	handleChange: (value: string) => void;

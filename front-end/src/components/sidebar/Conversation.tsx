@@ -1,10 +1,10 @@
-import React from "react";
 import useConversation from "../../zustand/useConversation";
+import { IConversation } from "../../interfaces/conversation";
 
 type ConversationProps = {
-	conversation: any;
+	conversation: IConversation;
 	emoji: string;
-	lastIdx: number;
+	lastIdx: boolean;
 };
 
 const Conversation = ({ conversation, emoji, lastIdx }: ConversationProps) => {
