@@ -3,9 +3,12 @@ import Message from "./Message";
 import useGetMessages from "../../hooks/useGetMessages";
 import MessageSkeleton from "../skeletons/MessageSkeleton";
 import { IMessage } from "../../interfaces/message";
+import useListenMessages from "../../hooks/useListenMessages";
 
 const MessagesList = () => {
 	const { loading, messages } = useGetMessages();
+	useListenMessages();
+
 	const lastMessageRef = useRef<HTMLDivElement>(null);
 	useEffect(() => {
 		setTimeout(() => {
