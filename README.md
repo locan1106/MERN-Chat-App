@@ -6,9 +6,7 @@
 
 ![Demo App](./Screenshot1.png)
 
-### Video Demo
-
-[Video Tutorial on Youtube](https://www.youtube.com/watch?v=T9k1zF1Oz1E)
+### Video Demo: [Link youtube](https://www.youtube.com/watch?v=T9k1zF1Oz1E)
 
 ### Some Features:
 
